@@ -1,19 +1,26 @@
-<script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'pt_BR'; // For example, enter 'en' or 'en-US'
-
-			embeddedservice_bootstrap.init(
-				'00DHZ0000052S6z',
-				'POC_Levinho_1',
-				'https://levesaude--dev.sandbox.my.site.com/ESWPOCLevinho1752620838126',
-				{
-					scrt2URL: 'https://levesaude--dev.sandbox.my.salesforce-scrt.com'
+<html>
+	<header>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	</header>
+	<body>
+		<script type='text/javascript'>
+			function initEmbeddedMessaging() {
+				try {
+					embeddedservice_bootstrap.settings.language = 'pt_BR'; // For example, enter 'en' or 'en-US'
+	
+					embeddedservice_bootstrap.init(
+						'00DHZ0000052S6z',
+						'POC_Levinho_1',
+						'https://levesaude--dev.sandbox.my.site.com/ESWPOCLevinho1752620838126',
+						{
+							scrt2URL: 'https://levesaude--dev.sandbox.my.salesforce-scrt.com'
+						}
+					);
+				} catch (err) {
+					console.error('Error loading Embedded Messaging: ', err);
 				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-</script>
-<script type='text/javascript' src='https://levesaude--dev.sandbox.my.site.com/ESWPOCLevinho1752620838126/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+			};
+		</script>
+		<script type='text/javascript' src='https://levesaude--dev.sandbox.my.site.com/ESWPOCLevinho1752620838126/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+	</body>
+</html>
